@@ -1,3 +1,5 @@
-com\tarotgame\model\CardModelTest.class
+com\tarotgame\CardModelDemo.class
 com\tarotgame\model\MajorArcana.class
+com\tarotgame\Main.class
+com\tarotgame\model\CardModelTest.class
 com\tarotgame\model\Card.class
