@@ -27,6 +27,7 @@ public class Deck {
      * Creates a new deck with all Major Arcana cards.
      * Deck is automatically shuffled upon creation.
      */
+    @SuppressWarnings("OverridableMethodCallInConstructor")
     public Deck() {
         this.random = new Random();
         this.fullDeck = MajorArcana.createFullDeck();
@@ -39,6 +40,7 @@ public class Deck {
      * 
      * @param seed Random seed for reproducible shuffling
      */
+    @SuppressWarnings("OverridableMethodCallInConstructor")
     public Deck(long seed) {
         this.random = new Random(seed);
         this.fullDeck = MajorArcana.createFullDeck();
