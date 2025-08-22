@@ -39,7 +39,6 @@ public class InterpretationServiceTest {
             
         } catch (Exception e) {
             System.err.println("TEST FAILED: " + e.getMessage());
-            e.printStackTrace();
         }
     }
     
@@ -173,6 +172,7 @@ public class InterpretationServiceTest {
     /**
      * Helper method: Display all card names (useful for verification)
      */
+    @SuppressWarnings("unused")
     private static void displayAllCardNames(InterpretationService service) {
         System.out.println("=== ALL MAJOR ARCANA CARDS ===");
         for (int i = 0; i <= 21; i++) {
@@ -188,6 +188,7 @@ public class InterpretationServiceTest {
     /**
      * Helper method: Test a complete card interpretation using your Card class
      */
+    @SuppressWarnings("unused")
     private static void testCompleteCardInterpretation(InterpretationService service, int arcanaNumber) {
         System.out.println("=== COMPLETE INTERPRETATION: " + service.getCardName(arcanaNumber) + " ===");
         

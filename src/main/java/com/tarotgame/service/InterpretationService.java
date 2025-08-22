@@ -19,8 +19,8 @@ import com.tarotgame.model.Card;
 public class InterpretationService {
     
     private static final String MEANINGS_FILE = "/card_meanings.json";
-    private Map<Integer, CardMeaning> cardMeanings;
-    private ObjectMapper objectMapper;
+    private final Map<Integer, CardMeaning> cardMeanings;
+    private final ObjectMapper objectMapper;
     
     /**
      * Position types for tarot readings
@@ -125,13 +125,13 @@ public class InterpretationService {
          * Get meaning based on position
          */
         public String getMeaningByPosition(Position position) {
-            switch (position) {
-                case PAST: return pastContext;
-                case PRESENT: return presentContext;
-                case FUTURE: return futureContext;
-                case GENERAL: return general;
-                default: return general;
-            }
+            return switch (position) {
+                case PAST -> pastContext;
+                case PRESENT -> presentContext;
+                case FUTURE -> futureContext;
+                case GENERAL -> general;
+                default -> general;
+            };
         }
     }
     
