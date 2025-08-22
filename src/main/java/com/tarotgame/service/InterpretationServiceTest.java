@@ -34,6 +34,9 @@ public class InterpretationServiceTest {
             
             // Test 6: Error Handling
             testErrorHandling(service);
+
+            // Test 7: Card Creation Integration
+            testCardCreation(service);
             
             System.out.println("\n=== ALL TESTS COMPLETED SUCCESSFULLY ===");
             
@@ -168,6 +171,34 @@ public class InterpretationServiceTest {
         }
         System.out.println();
     }
+
+    /**
+     * Test 7: Card creation integration with your Card class
+     */
+    private static void testCardCreation(InterpretationService service) {
+        System.out.println("TEST 7: Card Creation Integration");
+        
+        // Test creating individual cards
+        Card fool = service.createCard(0);
+        System.out.println("Created card: " + fool);
+        System.out.println("Card's built-in meaning: " + fool.getCurrentMeaning());
+        
+        // Test flipping orientation
+        fool.setReversed(true);
+        System.out.println("After reversing: " + fool.getDisplayName());
+        System.out.println("Reversed meaning: " + fool.getCurrentMeaning());
+        
+        // Test creating all cards
+        Card[] allCards = service.createAllCards();
+        System.out.println("Created " + allCards.length + " cards successfully");
+        
+        // Show first few cards
+        System.out.println("First 5 cards:");
+        for (int i = 0; i < 5; i++) {
+            System.out.println("  " + allCards[i].toString());
+        }
+        System.out.println();
+    }           
     
     /**
      * Helper method: Display all card names (useful for verification)
@@ -211,5 +242,7 @@ public class InterpretationServiceTest {
         System.out.println("  Present: " + service.getCardInterpretation(arcanaNumber, true, InterpretationService.Position.PRESENT));
         System.out.println("  Future: " + service.getCardInterpretation(arcanaNumber, true, InterpretationService.Position.FUTURE));
         System.out.println();
+
+        
     }
 }
