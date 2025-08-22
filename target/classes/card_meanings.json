@@ -1,0 +1,400 @@
+{
+  "majorArcana": [
+    {
+      "id": 0,
+      "name": "The Fool",
+      "upright": {
+        "keywords": ["new beginnings", "innocence", "spontaneity", "free spirit"],
+        "general": "A journey is beginning. Embrace new opportunities with optimism and trust in the unknown.",
+        "pastContext": "A leap of faith or naive decision in your past has led to valuable learning experiences.",
+        "presentContext": "You stand at the threshold of a new adventure. Trust your instincts and take the first step.",
+        "futureContext": "New opportunities are approaching. Remain open to unexpected paths and maintain your sense of wonder."
+      },
+      "reversed": {
+        "keywords": ["recklessness", "foolishness", "poor judgment", "lack of direction"],
+        "general": "Caution against hasty decisions. Consider the consequences before acting.",
+        "pastContext": "Past impulsiveness or poor judgment created complications you're still addressing.",
+        "presentContext": "You may be acting without proper consideration. Slow down and think things through.",
+        "futureContext": "Avoid reckless behavior. Plan carefully before making major decisions."
+      }
+    },
+    {
+      "id": 1,
+      "name": "The Magician",
+      "upright": {
+        "keywords": ["manifestation", "resourcefulness", "power", "inspired action"],
+        "general": "You have all the tools needed to succeed. Focus your will and take decisive action.",
+        "pastContext": "Your past efforts and skills have created a strong foundation for current success.",
+        "presentContext": "You are in a position of power and capability. Use your talents wisely.",
+        "futureContext": "Your ability to manifest your desires will be at its peak. Stay focused on your goals."
+      },
+      "reversed": {
+        "keywords": ["manipulation", "poor planning", "untapped talents", "lack of energy"],
+        "general": "Beware of manipulation or misuse of power. Your talents may be scattered or misdirected.",
+        "pastContext": "Missed opportunities or misused talents in the past are affecting your current situation.",
+        "presentContext": "You may be manipulating situations or people. Consider more ethical approaches.",
+        "futureContext": "Without focus and proper planning, your efforts may be wasted or misdirected."
+      }
+    },
+    {
+      "id": 2,
+      "name": "The High Priestess",
+      "upright": {
+        "keywords": ["intuition", "sacred knowledge", "divine feminine", "subconscious mind"],
+        "general": "Trust your intuition and inner wisdom. The answers you seek lie within.",
+        "pastContext": "Past intuitive insights or spiritual experiences have shaped your current understanding.",
+        "presentContext": "Listen to your inner voice. The situation requires intuitive rather than logical approaches.",
+        "futureContext": "Your psychic abilities and intuition will guide you to important revelations."
+      },
+      "reversed": {
+        "keywords": ["secrets", "disconnected from intuition", "lack of center", "repressed feelings"],
+        "general": "You may be ignoring your intuition or keeping dangerous secrets.",
+        "pastContext": "Suppressed emotions or ignored intuition from the past are surfacing now.",
+        "presentContext": "You're disconnected from your inner wisdom. Take time for quiet reflection.",
+        "futureContext": "Hidden information may be revealed, or you may need to reconnect with your intuitive side."
+      }
+    },
+    {
+      "id": 3,
+      "name": "The Empress",
+      "upright": {
+        "keywords": ["femininity", "beauty", "nature", "nurturing", "abundance"],
+        "general": "A time of growth, creativity, and abundance. Nurture your projects and relationships.",
+        "pastContext": "Past nurturing or creative endeavors have blossomed into current abundance.",
+        "presentContext": "You are in a fertile period for creativity and growth. Embrace your nurturing nature.",
+        "futureContext": "Abundance and creative fulfillment await. Your efforts will bear beautiful fruit."
+      },
+      "reversed": {
+        "keywords": ["creative block", "dependence on others", "smothering", "lack of growth"],
+        "general": "Creative blocks or over-dependence may be hindering growth and abundance.",
+        "pastContext": "Past over-nurturing or creative stagnation is affecting your current situation.",
+        "presentContext": "You may be smothering others or experiencing creative blocks. Find balance.",
+        "futureContext": "Without proper care and attention, your projects may stagnate or fail to thrive."
+      }
+    },
+    {
+      "id": 4,
+      "name": "The Emperor",
+      "upright": {
+        "keywords": ["authority", "structure", "control", "fatherly figure", "leadership"],
+        "general": "Take charge and establish order. Your leadership and authority are needed now.",
+        "pastContext": "Strong leadership or structured decisions in the past have created current stability.",
+        "presentContext": "You are in a position of authority. Use your power responsibly and fairly.",
+        "futureContext": "A structured approach and strong leadership will be key to achieving your goals."
+      },
+      "reversed": {
+        "keywords": ["domination", "excessive control", "lack of discipline", "abusing power"],
+        "general": "Beware of being too controlling or rigid. Power may be being abused or misused.",
+        "pastContext": "Past authoritarian behavior or lack of discipline is creating current problems.",
+        "presentContext": "You may be too controlling or rigid in your approach. Consider more flexibility.",
+        "futureContext": "Excessive control or abuse of power could lead to rebellion or failure."
+      }
+    },
+    {
+      "id": 5,
+      "name": "The Hierophant",
+      "upright": {
+        "keywords": ["spiritual wisdom", "religious beliefs", "conformity", "tradition", "institutions"],
+        "general": "Seek wisdom from established traditions and institutions. Learning from mentors is favored.",
+        "pastContext": "Traditional values or spiritual teachings from the past continue to guide you.",
+        "presentContext": "You may benefit from conventional approaches or seeking guidance from mentors.",
+        "futureContext": "Spiritual growth through traditional means or institutional learning awaits."
+      },
+      "reversed": {
+        "keywords": ["personal beliefs", "freedom", "challenging tradition", "unconventional"],
+        "general": "Question established norms and find your own path. Break free from restrictive traditions.",
+        "pastContext": "Past rebellion against convention or restrictive beliefs has shaped your current freedom.",
+        "presentContext": "You're challenging traditional approaches and finding your own way forward.",
+        "futureContext": "Your unconventional approach will lead to personal breakthroughs and freedom."
+      }
+    },
+    {
+      "id": 6,
+      "name": "The Lovers",
+      "upright": {
+        "keywords": ["love", "harmony", "relationships", "values alignment", "choices"],
+        "general": "Important relationships and value-based decisions are highlighted. Choose with your heart.",
+        "pastContext": "A significant relationship or value-based choice from the past continues to influence you.",
+        "presentContext": "You face an important choice about relationships or values. Follow your heart.",
+        "futureContext": "A meaningful relationship or important decision about your values approaches."
+      },
+      "reversed": {
+        "keywords": ["disharmony", "imbalance", "misaligned values", "poor choices"],
+        "general": "Relationship conflicts or poor choices are causing disharmony. Realign your values.",
+        "pastContext": "Past relationship conflicts or poor decisions are affecting current harmony.",
+        "presentContext": "There's disharmony in your relationships or conflict in your values. Seek balance.",
+        "futureContext": "Without addressing current imbalances, relationships may suffer or poor choices may be made."
+      }
+    },
+    {
+      "id": 7,
+      "name": "The Chariot",
+      "upright": {
+        "keywords": ["control", "willpower", "success", "determination", "direction"],
+        "general": "Victory through determination and willpower. You have control over your destiny.",
+        "pastContext": "Past determination and focused effort have brought you to your current position of strength.",
+        "presentContext": "You are in control and moving forward with purpose. Maintain your determination.",
+        "futureContext": "Success will come through willpower and staying focused on your goals."
+      },
+      "reversed": {
+        "keywords": ["lack of control", "lack of direction", "aggression", "powerlessness"],
+        "general": "You may be feeling out of control or lacking direction. Regain your focus and composure.",
+        "pastContext": "Past lack of direction or control issues are still affecting your current path.",
+        "presentContext": "You're struggling with control or direction. Take time to refocus your efforts.",
+        "futureContext": "Without regaining control and direction, you may face setbacks or continued confusion."
+      }
+    },
+    {
+      "id": 8,
+      "name": "Strength",
+      "upright": {
+        "keywords": ["inner strength", "bravery", "compassion", "focus", "influence"],
+        "general": "You have the inner strength to overcome any challenge. Approach difficulties with compassion.",
+        "pastContext": "Your past courage and inner strength have built the resilience you possess today.",
+        "presentContext": "Draw upon your inner strength and approach current challenges with gentle determination.",
+        "futureContext": "Your inner strength and compassionate approach will help you overcome future obstacles."
+      },
+      "reversed": {
+        "keywords": ["self-doubt", "lack of confidence", "weakness", "raw emotion"],
+        "general": "Self-doubt or lack of confidence may be undermining your efforts. Reconnect with your inner power.",
+        "pastContext": "Past experiences of weakness or self-doubt are affecting your current confidence.",
+        "presentContext": "You may be struggling with self-doubt or emotional reactions. Find your inner calm.",
+        "futureContext": "Unless you address your self-doubt, it may continue to weaken your resolve and effectiveness."
+      }
+    },
+    {
+      "id": 9,
+      "name": "The Hermit",
+      "upright": {
+        "keywords": ["introspection", "seeking the truth", "inner guidance", "solitude"],
+        "general": "A time for introspection and seeking inner wisdom. Step back and reflect on your path.",
+        "pastContext": "A period of soul-searching or solitude in the past has brought you valuable insights.",
+        "presentContext": "You need time alone to reflect and find your inner truth. Seek solitude and contemplation.",
+        "futureContext": "A period of introspection and spiritual seeking will provide the guidance you need."
+      },
+      "reversed": {
+        "keywords": ["isolation", "lost your way", "stubborn", "antisocial"],
+        "general": "You may be too isolated or have lost your way. Consider seeking guidance from others.",
+        "pastContext": "Past isolation or withdrawal has led to disconnection from others and your path.",
+        "presentContext": "You may be isolating yourself too much or stubbornly refusing guidance.",
+        "futureContext": "Continued isolation or refusal to seek help may lead to further confusion or loneliness."
+      }
+    },
+    {
+      "id": 10,
+      "name": "Wheel of Fortune",
+      "upright": {
+        "keywords": ["good luck", "karma", "life cycles", "destiny", "turning point"],
+        "general": "A turning point brings good fortune. What goes around comes around - expect positive karma.",
+        "pastContext": "Past actions or karma are now bringing positive changes and opportunities.",
+        "presentContext": "You're at a turning point where luck and positive change are flowing in your direction.",
+        "futureContext": "The wheel of fortune turns in your favor. Destiny brings positive opportunities."
+      },
+      "reversed": {
+        "keywords": ["bad luck", "lack of control", "breaking cycles", "external forces"],
+        "general": "Temporary setbacks or bad luck. Remember that this too shall pass - cycles always turn.",
+        "pastContext": "Past negative karma or poor decisions are creating current challenges.",
+        "presentContext": "You may be experiencing bad luck or feeling at the mercy of external forces.",
+        "futureContext": "Temporary setbacks may occur, but remember that fortune's wheel always turns again."
+      }
+    },
+    {
+      "id": 11,
+      "name": "Justice",
+      "upright": {
+        "keywords": ["fairness", "truth", "cause and effect", "law", "accountability"],
+        "general": "Truth and justice prevail. Fair decisions and accountability for actions are highlighted.",
+        "pastContext": "Past actions, whether good or bad, are now bringing their just consequences.",
+        "presentContext": "A fair and balanced approach is needed. Truth and justice will guide the outcome.",
+        "futureContext": "Justice will be served and truth will emerge. Your actions will receive their fair consequences."
+      },
+      "reversed": {
+        "keywords": ["unfairness", "lack of accountability", "dishonesty", "bias"],
+        "general": "Injustice or unfairness may be present. Lack of accountability or biased decisions are possible.",
+        "pastContext": "Past injustices or unfair treatment are still affecting your current situation.",
+        "presentContext": "You may be experiencing or perpetuating unfairness. Strive for greater balance and honesty.",
+        "futureContext": "Without addressing current imbalances, injustice or unfair outcomes may continue."
+      }
+    },
+    {
+      "id": 12,
+      "name": "The Hanged Man",
+      "upright": {
+        "keywords": ["suspension", "restriction", "letting go", "sacrifice", "new perspective"],
+        "general": "A period of waiting and sacrifice leads to new insights. Sometimes you must let go to move forward.",
+        "pastContext": "A past sacrifice or period of suspension has given you valuable perspective and wisdom.",
+        "presentContext": "You're in a period of waiting or suspension. Use this time to gain new perspectives.",
+        "futureContext": "A necessary sacrifice or period of patience will ultimately lead to greater understanding."
+      },
+      "reversed": {
+        "keywords": ["delays", "resistance", "stalling", "indecision"],
+        "general": "Unnecessary delays or resistance to change. You may be stalling when action is needed.",
+        "pastContext": "Past resistance to necessary changes is still creating delays and complications.",
+        "presentContext": "You may be unnecessarily delaying decisions or resisting needed changes.",
+        "futureContext": "Continued resistance or indecision may lead to missed opportunities or stagnation."
+      }
+    },
+    {
+      "id": 13,
+      "name": "Death",
+      "upright": {
+        "keywords": ["endings", "beginnings", "change", "transformation", "transition"],
+        "general": "A major transformation is occurring. Endings lead to new beginnings - embrace the change.",
+        "pastContext": "A significant ending or transformation in the past has cleared the way for current growth.",
+        "presentContext": "You're undergoing a major transformation. Let go of what no longer serves you.",
+        "futureContext": "Significant change and transformation await. Old chapters will close, new ones will begin."
+      },
+      "reversed": {
+        "keywords": ["resistance to change", "fear of endings", "stagnation", "decay"],
+        "general": "Resistance to necessary change or fear of endings. Stagnation may be preventing growth.",
+        "pastContext": "Past resistance to change or fear of endings is still limiting your current progress.",
+        "presentContext": "You may be resisting necessary changes or clinging to what should be released.",
+        "futureContext": "Without embracing necessary changes, stagnation and decay may set in."
+      }
+    },
+    {
+      "id": 14,
+      "name": "Temperance",
+      "upright": {
+        "keywords": ["balance", "moderation", "patience", "purpose", "meaning"],
+        "general": "Balance and moderation bring harmony. Patience and a steady approach will yield the best results.",
+        "pastContext": "Past patience and balanced approach have created current stability and harmony.",
+        "presentContext": "You need to find balance and take a moderate approach to current challenges.",
+        "futureContext": "Patience and balance will be key to achieving your long-term goals and finding meaning."
+      },
+      "reversed": {
+        "keywords": ["imbalance", "excess", "lack of long-term vision", "discord"],
+        "general": "Imbalance or excess is creating problems. You may lack long-term vision or be acting impatiently.",
+        "pastContext": "Past imbalances or excessive behavior are affecting your current stability.",
+        "presentContext": "You're experiencing imbalance or discord. Step back and find your center.",
+        "futureContext": "Without addressing current imbalances, discord and lack of direction may continue."
+      }
+    },
+    {
+      "id": 15,
+      "name": "The Devil",
+      "upright": {
+        "keywords": ["bondage", "addiction", "sexuality", "materialism", "ignorance"],
+        "general": "You may be trapped by material desires or unhealthy attachments. Recognize what binds you.",
+        "pastContext": "Past indulgences or unhealthy attachments have created current limitations or dependencies.",
+        "presentContext": "You may be bound by addiction, materialism, or unhealthy relationships. Seek freedom.",
+        "futureContext": "Without addressing current attachments or dependencies, they may become more binding."
+      },
+      "reversed": {
+        "keywords": ["releasing limiting beliefs", "exploring dark thoughts", "detachment", "freedom"],
+        "general": "Breaking free from limitations and unhealthy attachments. Liberation from what has bound you.",
+        "pastContext": "You've broken free from past limitations or unhealthy patterns that once controlled you.",
+        "presentContext": "You're in the process of releasing yourself from unhealthy attachments or beliefs.",
+        "futureContext": "Freedom from current limitations and attachments is possible. Liberation awaits."
+      }
+    },
+    {
+      "id": 16,
+      "name": "The Tower",
+      "upright": {
+        "keywords": ["sudden change", "upheaval", "chaos", "revelation", "awakening"],
+        "general": "Sudden upheaval brings necessary change. What seemed stable may be shaken to its foundation.",
+        "pastContext": "A sudden upheaval or revelation in the past has fundamentally changed your perspective.",
+        "presentContext": "You're experiencing sudden change or upheaval. This disruption serves a higher purpose.",
+        "futureContext": "Unexpected changes or revelations will shake up your current situation, ultimately for the better."
+      },
+      "reversed": {
+        "keywords": ["personal transformation", "fear of change", "averting disaster"],
+        "general": "Personal transformation or narrowly avoiding disaster. Change may be resisted but is still necessary.",
+        "pastContext": "You've avoided or recovered from past upheaval, leading to inner transformation.",
+        "presentContext": "You may be resisting necessary change or undergoing internal rather than external upheaval.",
+        "futureContext": "Inner transformation may help you avoid external disaster, or change may come more gradually."
+      }
+    },
+    {
+      "id": 17,
+      "name": "The Star",
+      "upright": {
+        "keywords": ["hope", "faith", "purpose", "renewal", "spirituality"],
+        "general": "Hope and inspiration guide you forward. Your faith will be renewed and your purpose clarified.",
+        "pastContext": "Past hope and faith have sustained you through difficulties and brought you to this point.",
+        "presentContext": "You're filled with hope and inspiration. Trust in your dreams and spiritual guidance.",
+        "futureContext": "A period of hope, healing, and spiritual renewal awaits. Your dreams can become reality."
+      },
+      "reversed": {
+        "keywords": ["lack of faith", "despair", "disconnection", "lack of inspiration"],
+        "general": "Loss of hope or faith. You may feel disconnected from your purpose or spiritual guidance.",
+        "pastContext": "Past disappointments or loss of faith are affecting your current outlook and inspiration.",
+        "presentContext": "You may be experiencing despair or feeling disconnected from your spiritual side.",
+        "futureContext": "Without rekindling hope and faith, continued disconnection and despair may persist."
+      }
+    },
+    {
+      "id": 18,
+      "name": "The Moon",
+      "upright": {
+        "keywords": ["illusion", "fear", "anxiety", "subconscious", "intuition"],
+        "general": "Things are not as they seem. Trust your intuition to navigate through illusion and uncertainty.",
+        "pastContext": "Past illusions or subconscious fears have influenced your current perceptions and anxieties.",
+        "presentContext": "You may be dealing with illusions, fears, or anxiety. Trust your intuition over appearances.",
+        "futureContext": "A period of uncertainty or illusion approaches. Your intuition will be your best guide."
+      },
+      "reversed": {
+        "keywords": ["release of fear", "unhappiness", "confusion", "lack of clarity"],
+        "general": "Confusion and fear are lifting, but clarity may still be elusive. Continue working through illusions.",
+        "pastContext": "You're moving past previous fears or illusions, though some confusion may remain.",
+        "presentContext": "Fear and confusion are beginning to clear, revealing a clearer path forward.",
+        "futureContext": "Gradual release from fear and illusion will bring increasing clarity and peace."
+      }
+    },
+    {
+      "id": 19,
+      "name": "The Sun",
+      "upright": {
+        "keywords": ["joy", "success", "celebration", "positivity", "vitality"],
+        "general": "Success, joy, and vitality illuminate your path. Everything is coming together in perfect harmony.",
+        "pastContext": "Past successes and joyful experiences have built the foundation for current happiness.",
+        "presentContext": "You're experiencing a time of joy, success, and positive energy. Celebrate your achievements.",
+        "futureContext": "Bright success and happiness await. Your efforts will be rewarded with joy and vitality."
+      },
+      "reversed": {
+        "keywords": ["inner child", "feeling down", "overly optimistic", "sadness"],
+        "general": "Temporary clouds may dim your joy. Reconnect with your inner child and authentic happiness.",
+        "pastContext": "Past sadness or loss of innocence is affecting your current ability to experience full joy.",
+        "presentContext": "You may be feeling down or struggling to access your natural optimism and vitality.",
+        "futureContext": "Work on reconnecting with joy and your inner child to restore natural happiness and energy."
+      }
+    },
+    {
+      "id": 20,
+      "name": "Judgement",
+      "upright": {
+        "keywords": ["judgement", "rebirth", "inner calling", "absolution", "awakening"],
+        "general": "A spiritual awakening or calling beckons. Time for reflection, forgiveness, and rebirth.",
+        "pastContext": "Past experiences of judgment or awakening have prepared you for your current spiritual journey.",
+        "presentContext": "You're experiencing a spiritual awakening or inner calling. Listen to your higher self.",
+        "futureContext": "A time of judgment, rebirth, and spiritual awakening approaches. Answer your inner calling."
+      },
+      "reversed": {
+        "keywords": ["self-doubt", "harsh judgment", "lack of forgiveness", "missed calling"],
+        "general": "Self-judgment or unforgiveness may be blocking your spiritual growth. Practice compassion for yourself.",
+        "pastContext": "Past harsh self-judgment or unforgiveness is limiting your current spiritual development.",
+        "presentContext": "You may be too critical of yourself or others, blocking spiritual growth and awakening.",
+        "futureContext": "Without self-forgiveness and compassion, you may miss important spiritual opportunities."
+      }
+    },
+    {
+      "id": 21,
+      "name": "The World",
+      "upright": {
+        "keywords": ["completion", "accomplishment", "travel", "fulfillment", "success"],
+        "general": "Completion and fulfillment of a major life cycle. You have achieved your goals and found wholeness.",
+        "pastContext": "Past efforts and journey have culminated in the current sense of completion and achievement.",
+        "presentContext": "You're experiencing completion and success. A major chapter of your life is fulfilled.",
+        "futureContext": "Ultimate success and completion await. Your goals will be achieved and cycles completed."
+      },
+      "reversed": {
+        "keywords": ["incomplete", "lack of closure", "stagnation", "failed goals"],
+        "general": "Goals may be incomplete or delayed. You may lack the closure needed to move forward.",
+        "pastContext": "Past incomplete projects or lack of closure are affecting your current sense of achievement.",
+        "presentContext": "You may be close to completion but lacking final closure or achievement of your goals.",
+        "futureContext": "Without addressing what's incomplete, full success and satisfaction may remain elusive."
+      }
+    }
+  ]
+}

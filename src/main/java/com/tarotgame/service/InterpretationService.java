@@ -41,6 +41,32 @@ public class InterpretationService {
             return jsonKey;
         }
     }
+
+    /**
+     * Create a Card instance from JSON data
+     * This integrates with your existing Card class to create fully functional cards
+     */
+    public Card createCard(int arcanaNumber) {
+        CardMeaning cardMeaning = getCardMeaning(arcanaNumber);
+        
+        // Get general meanings for the Card constructor
+        String uprightMeaning = cardMeaning.getUpright().getGeneral();
+        String reversedMeaning = cardMeaning.getReversed().getGeneral();
+        
+        return new Card(arcanaNumber, cardMeaning.getName(), uprightMeaning, reversedMeaning);
+    }
+    
+    /**
+     * Create all Major Arcana cards
+     * Returns array of all 22 cards with meanings loaded from JSON
+     */
+    public Card[] createAllCards() {
+        Card[] cards = new Card[22];
+        for (int i = 0; i <= 21; i++) {
+            cards[i] = createCard(i);
+        }
+        return cards;
+    }
     
     /**
      * Inner class to represent card meaning data
@@ -145,12 +171,12 @@ public class InterpretationService {
     }
     
     /**
-     * Get card meaning by ID
+     * Get card meaning by arcana number
      */
-    public CardMeaning getCardMeaning(int cardId) {
-        CardMeaning meaning = cardMeanings.get(cardId);
+    public CardMeaning getCardMeaning(int arcanaNumber) {
+        CardMeaning meaning = cardMeanings.get(arcanaNumber);
         if (meaning == null) {
-            throw new IllegalArgumentException("No meaning found for card ID: " + cardId);
+            throw new IllegalArgumentException("No meaning found for arcana number: " + arcanaNumber);
         }
         return meaning;
     }
@@ -158,8 +184,8 @@ public class InterpretationService {
     /**
      * Get specific interpretation for a card
      */
-    public String getCardInterpretation(int cardId, boolean isReversed, Position position) {
-        CardMeaning cardMeaning = getCardMeaning(cardId);
+    public String getCardInterpretation(int arcanaNumber, boolean isReversed, Position position) {
+        CardMeaning cardMeaning = getCardMeaning(arcanaNumber);
         Interpretation interpretation = isReversed ? cardMeaning.getReversed() : cardMeaning.getUpright();
         return interpretation.getMeaningByPosition(position);
     }
@@ -167,17 +193,17 @@ public class InterpretationService {
     /**
      * Get keywords for a card
      */
-    public List<String> getCardKeywords(int cardId, boolean isReversed) {
-        CardMeaning cardMeaning = getCardMeaning(cardId);
+    public List<String> getCardKeywords(int arcanaNumber, boolean isReversed) {
+        CardMeaning cardMeaning = getCardMeaning(arcanaNumber);
         Interpretation interpretation = isReversed ? cardMeaning.getReversed() : cardMeaning.getUpright();
         return new ArrayList<>(interpretation.getKeywords());
     }
     
     /**
-     * Get card name by ID
+     * Get card name by arcana number
      */
-    public String getCardName(int cardId) {
-        return getCardMeaning(cardId).getName();
+    public String getCardName(int arcanaNumber) {
+        return getCardMeaning(arcanaNumber).getName();
     }
     
     /**
@@ -196,7 +222,7 @@ public class InterpretationService {
         for (int i = 0; i < 3; i++) {
             Card card = cards[i];
             interpretations[i] = getCardInterpretation(card.getArcanaNumber(), card.isReversed(), positions[i]);
-            cardNames[i] = getCardName(card.getArcanaNumber()) + (card.isReversed() ? " (Reversed)" : "");
+            cardNames[i] = card.getDisplayName();
         }
         
         return new ReadingInterpretation(cardNames, interpretations, generateOverallReading(cards));
