@@ -94,17 +94,29 @@ public class DeckTest {
         }
         
         System.out.println("Drew " + drawCount + " cards");
-        System.out.println("Deck size before final draw: " + deck.size());
+        System.out.println("Deck size before triggering reshuffle: " + deck.size());
         
-        // This should trigger auto-reshuffle
-        Card finalCard = deck.drawCard();
-        System.out.println("Drew final card: " + finalCard.getName());
-        System.out.println("Deck size after auto-reshuffle: " + deck.size());
+        // This should trigger auto-reshuffle (deck size < 3)
+        System.out.println("Drawing card when deck size < 3 (should trigger reshuffle)...");
+        Card cardFromFreshDeck = deck.drawCard();
+        System.out.println("Drew card from reshuffled deck: " + cardFromFreshDeck.getName());
+        System.out.println("Deck size after auto-reshuffle and draw: " + deck.size());
         
-        if (deck.size() == 21) { // Should be 22 - 1 (the card we just drew)
+        // Validation: After auto-reshuffle (22 cards) and one draw, should have 21
+        if (deck.size() == 21) {
             System.out.println("✓ Auto-reshuffle working correctly");
+            System.out.println("  - Triggered when size was < 3");
+            System.out.println("  - Reset to full deck (22 cards)"); 
+            System.out.println("  - Drew one card, leaving 21");
         } else {
             System.out.println("❌ Auto-reshuffle problem. Expected 21, got " + deck.size());
+        }
+        
+        // Additional validation: Ensure we can now draw multiple cards
+        if (deck.hasEnoughCardsForReading()) {
+            System.out.println("✓ Deck ready for readings after auto-reshuffle");
+        } else {
+            System.out.println("❌ Deck not ready for readings after auto-reshuffle");
         }
         
         System.out.println();
