@@ -49,6 +49,9 @@ public class ReadingSystem {
         private final InterpretationService.ReadingInterpretation interpretation;
         private final String readingId;
         
+        // Static counter for ensuring unique IDs
+        private static long readingCounter = 0;
+        
         /**
          * Creates a new reading
          */
@@ -60,11 +63,13 @@ public class ReadingSystem {
         }
         
         /**
-         * Generate unique reading ID based on timestamp
+         * Generate unique reading ID based on timestamp and counter
          */
-        private String generateReadingId() {
+        private synchronized String generateReadingId() {
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd-HHmmss");
-            return "R" + timestamp.format(formatter);
+            String timeStamp = timestamp.format(formatter);
+            long currentCounter = ++readingCounter;
+            return String.format("R%s-%03d", timeStamp, currentCounter);
         }
         
         // Getters
@@ -225,14 +230,7 @@ public class ReadingSystem {
         Reading[] readings = new Reading[count];
         for (int i = 0; i < count; i++) {
             readings[i] = performReading(deck);
-            
-            // Small delay to ensure unique timestamps
-            try {
-                Thread.sleep(1);
-            } catch (InterruptedException e) {
-                Thread.currentThread().interrupt();
-                break;
-            }
+            // No need for Thread.sleep anymore since we have a counter-based ID system
         }
         
         return readings;

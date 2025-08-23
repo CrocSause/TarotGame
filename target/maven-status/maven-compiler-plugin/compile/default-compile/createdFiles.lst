@@ -1,5 +1,7 @@
 com\tarotgame\service\InterpretationServiceTest.class
 com\tarotgame\CardModelDemo.class
+com\tarotgame\service\ReadingSystem$ReadingPosition.class
+com\tarotgame\service\ReadingSystemTest.class
 com\tarotgame\Main.class
 com\tarotgame\model\Deck.class
 com\tarotgame\service\InterpretationService.class
@@ -10,6 +12,8 @@ com\tarotgame\model\DeckTest.class
 com\tarotgame\service\InterpretationService$Position.class
 com\tarotgame\IntegratedDemo.class
 com\tarotgame\service\InterpretationService$Interpretation.class
+com\tarotgame\service\ReadingSystem$Reading.class
 com\tarotgame\service\InterpretationService$ReadingInterpretation.class
 com\tarotgame\model\CardModelTest.class
 com\tarotgame\model\Card.class
+com\tarotgame\service\ReadingSystem.class
