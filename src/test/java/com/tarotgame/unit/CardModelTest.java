@@ -1,5 +1,5 @@
 // CardModelTest.java
-package com.tarotgame.model;
+package com.tarotgame.unit;
 
 import java.util.List;
 

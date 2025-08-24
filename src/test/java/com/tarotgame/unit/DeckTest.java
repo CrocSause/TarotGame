@@ -1,7 +1,10 @@
 // DeckTest.java
-package com.tarotgame.model;
+package com.tarotgame.unit;
 
 import java.util.List;
+
+import com.tarotgame.model.Card;
+import com.tarotgame.model.Deck;
 
 /**
  * Test suite for Deck functionality.
