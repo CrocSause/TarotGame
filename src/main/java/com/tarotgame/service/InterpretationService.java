@@ -18,7 +18,7 @@ import com.tarotgame.model.Card;
  */
 public class InterpretationService {
     
-    private static final String MEANINGS_FILE = "/card_meanings.json";
+    private static final String MEANINGS_FILE = "/com/tarotgame/resources/card_meanings.json";
     private final Map<Integer, CardMeaning> cardMeanings;
     private final ObjectMapper objectMapper;
     
