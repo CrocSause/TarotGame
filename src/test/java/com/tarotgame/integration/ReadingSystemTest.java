@@ -1,7 +1,9 @@
-package com.tarotgame.service;
+package com.tarotgame.integration;
 
 import com.tarotgame.model.Card;
 import com.tarotgame.model.Deck;
+import com.tarotgame.service.InterpretationService;
+import com.tarotgame.service.ReadingSystem;
 
 /**
  * Comprehensive test for the complete reading workflow

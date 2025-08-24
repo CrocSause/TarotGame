@@ -1,7 +1,9 @@
 // GameEngineTest.java
-package com.tarotgame.engine;
+package com.tarotgame.integration;
 
+import com.tarotgame.engine.GameEngine;
 import com.tarotgame.service.ReadingSystem.Reading;
+
 
 /**
  * Comprehensive test class for the GameEngine.

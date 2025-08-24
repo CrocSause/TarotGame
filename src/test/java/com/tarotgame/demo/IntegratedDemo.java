@@ -1,5 +1,5 @@
 // IntegratedDemo.java - Shows Card + Deck integration
-package com.tarotgame;
+package com.tarotgame.demo;
 
 import java.util.List;
 

@@ -3,6 +3,7 @@ package com.tarotgame.unit;
 import java.util.List;
 
 import com.tarotgame.model.Card;
+import com.tarotgame.service.InterpretationService;
 
 /**
  * Test class for InterpretationService

@@ -3,6 +3,9 @@ package com.tarotgame.unit;
 
 import java.util.List;
 
+import com.tarotgame.model.Card;
+import com.tarotgame.model.MajorArcana;
+
 /**
  * Simple test class to verify Card Model functionality.
  * This will serve as our Proof-of-Concept for the Card Model component.

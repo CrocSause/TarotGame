@@ -1,45 +1,41 @@
-// Main.java - Entry point for testing
 package com.tarotgame;
 
+import com.tarotgame.engine.GameEngine;
+
 /**
- * Main entry point for the Tarot Game application.
- * Currently runs Card Model and Deck Management demonstrations.
+ * Production entry point for the Tarot Game application.
+ * This will launch the main game interface once Console UI is implemented.
  */
 public class Main {
+    
     public static void main(String[] args) {
-        System.out.println("🎴 TAROT GAME - COMPONENT TESTING SUITE");
-        System.out.println("═".repeat(60) + "\n");
+        System.out.println("🎴 WELCOME TO TAROT GAME");
+        System.out.println("═".repeat(40));
         
-        // Phase 1: Card Model Testing
-        System.out.println("PHASE 1: CARD MODEL COMPONENT");
-        System.out.println("-".repeat(40));
-        com.tarotgame.model.CardModelTest.main(args);
-        
-        System.out.println("\n" + "═".repeat(60) + "\n");
-        
-        // Phase 2: Deck Management Testing
-        System.out.println("PHASE 2: DECK MANAGEMENT COMPONENT");
-        System.out.println("-".repeat(40));
-        com.tarotgame.model.DeckTest.main(args);
-        
-        System.out.println("\n" + "═".repeat(60) + "\n");
-        
-        // Demo Phase: Component Demonstrations
-        System.out.println("DEMONSTRATION PHASE");
-        System.out.println("-".repeat(40));
-        
-        System.out.println("\n>>> Card Model Demo <<<");
-        CardModelDemo.main(args);
-        
-        System.out.println("\n>>> Deck Management Demo <<<");
-        DeckDemo.main(args);
-        
-        System.out.println("\n>>> Integrated Components Demo <<<");
-        IntegratedDemo.main(args);
-        
-        System.out.println("\n" + "═".repeat(60));
-        System.out.println("🎉 ALL COMPONENT TESTING COMPLETED SUCCESSFULLY!");
-        System.out.println("   Ready to proceed to next development phase.");
-        System.out.println("═".repeat(60));
+        try {
+            // Initialize game engine
+            GameEngine engine = new GameEngine();
+            
+            if (engine.isReady()) {
+                System.out.println("✓ Game engine initialized successfully");
+                System.out.println("✓ " + engine.getQuickStatus());
+                
+                // TODO: Launch Console UI when implemented
+                // ConsoleUI ui = new ConsoleUI(engine);
+                // ui.start();
+                
+                System.out.println("\n🚧 Console UI coming soon!");
+                System.out.println("   Run TestMain.java for testing and demos");
+                
+            } else {
+                System.err.println("❌ Failed to initialize game engine");
+                if (engine.hasError()) {
+                    System.err.println("   Error: " + engine.getLastError());
+                }
+            }
+            
+        } catch (Exception e) {
+            System.err.println("❌ Application startup failed: " + e.getMessage());
+        }
     }
 }

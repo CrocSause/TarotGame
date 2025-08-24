@@ -1,0 +1,10 @@
+com\tarotgame\unit\InterpretationServiceTest.class
+com\tarotgame\integration\GameEngineUnitTest.class
+com\tarotgame\demo\IntegratedDemo.class
+com\tarotgame\manual\TestSuite.class
+com\tarotgame\integration\ReadingSystemTest.class
+com\tarotgame\unit\CardModelTest.class
+com\tarotgame\TestMain.class
+com\tarotgame\unit\DeckTest.class
+com\tarotgame\demo\ComponentDemo.class
+com\tarotgame\integration\GameEngineTest.class
