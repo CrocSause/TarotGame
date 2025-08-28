@@ -211,8 +211,8 @@ public class TarotGameApplication extends Application {
      * Handle reading action - placeholder for now
      */
     private void performReading() {
-        showNotImplementedDialog("Three-Card Reading", 
-            "The reading interface is being developed. For now, please use the console version.");
+        ReadingViewController readingController = new ReadingViewController(gameEngine, primaryStage);
+        readingController.showReadingInterface();
     }
     
     /**
