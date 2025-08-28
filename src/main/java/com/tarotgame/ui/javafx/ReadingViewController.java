@@ -18,11 +18,11 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
-import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -339,22 +339,14 @@ public class ReadingViewController {
             "-fx-letter-spacing: 1px;"
         );
         
-        // Card representation (placeholder rectangle)
-        VBox cardRect = new VBox();
-        cardRect.setPrefSize(120, 180);
-        cardRect.setAlignment(Pos.CENTER);
-        cardRect.setStyle(
-            "-fx-background-color: linear-gradient(to bottom, #4a90e2, #357abd); " +
-            "-fx-background-radius: 5px; " +
-            "-fx-border-color: #2c3e50; " +
-            "-fx-border-width: 2px; " +
-            "-fx-border-radius: 5px;"
-        );
+        // Card image with scaling for better display
+        CardImageManager imageManager = CardImageManager.getInstance();
+        ImageView cardImageView = imageManager.createCardImageView(card, 2.5); // Scale up from 46x81 to ~115x203
         
-        // Card back pattern (decorative)
-        Text cardPattern = new Text("✦");
-        cardPattern.setStyle("-fx-fill: white; -fx-font-size: 40px;");
-        cardRect.getChildren().add(cardPattern);
+        // Add border and shadow to the image
+        cardImageView.setStyle(
+            "-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 8, 0, 2, 2);"
+        );
         
         // Card name
         Label cardName = new Label(card.getDisplayName());
@@ -368,7 +360,7 @@ public class ReadingViewController {
         cardName.setTextAlignment(TextAlignment.CENTER);
         cardName.setMaxWidth(180);
         
-        cardBox.getChildren().addAll(positionLabel, cardRect, cardName);
+        cardBox.getChildren().addAll(positionLabel, cardImageView, cardName);
         return cardBox;
     }
     
