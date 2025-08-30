@@ -63,23 +63,24 @@ public class DeckViewController {
         deckStage.initModality(Modality.NONE);
         deckStage.initOwner(primaryStage);
         deckStage.setTitle("Deck Management");
-        deckStage.setWidth(700);
-        deckStage.setHeight(600);
-        deckStage.setMinWidth(600);
-        deckStage.setMinHeight(500);
+        deckStage.setWidth(ThemeManager.WINDOW_DEFAULT_WIDTH);
+        deckStage.setHeight(ThemeManager.WINDOW_DEFAULT_HEIGHT);
+        deckStage.setMinWidth(ThemeManager.WINDOW_MIN_WIDTH);
+        deckStage.setMinHeight(ThemeManager.WINDOW_MIN_HEIGHT);
         
         // Create main layout
         BorderPane rootPane = new BorderPane();
-        rootPane.setPadding(new Insets(15));
+        rootPane.setPadding(ThemeManager.getStandardInsets());
+        ThemeManager.applyMainTheme(rootPane);
         
         // Setup components
         setupHeader(rootPane);
         setupMainContent(rootPane);
         setupFooter(rootPane);
         
-        // Create scene
+        // Create scene with theme
         Scene scene = new Scene(rootPane);
-        scene.getStylesheets().add("data:text/css," + getCustomCSS());
+        scene.getStylesheets().add("data:text/css," + ThemeManager.getGlobalCSS());
         deckStage.setScene(scene);
         
         // Load initial data
@@ -95,15 +96,15 @@ public class DeckViewController {
      * Setup the header section
      */
     private void setupHeader(BorderPane rootPane) {
-        VBox header = new VBox(5);
+        VBox header = new VBox(ThemeManager.SPACING_SMALL);
         header.setAlignment(Pos.CENTER);
-        header.setPadding(new Insets(10, 0, 20, 0));
+        header.setPadding(new Insets(ThemeManager.SPACING_MEDIUM, 0, ThemeManager.SPACING_LARGE, 0));
         
         Label titleLabel = new Label("Deck Management");
-        titleLabel.setStyle("-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;");
+        ThemeManager.styleTitle(titleLabel);
         
         Label subtitleLabel = new Label("Manage your tarot deck settings and status");
-        subtitleLabel.setStyle("-fx-font-size: 16px; -fx-text-fill: #7f8c8d; -fx-font-style: italic;");
+        ThemeManager.styleBodyText(subtitleLabel);
         
         header.getChildren().addAll(titleLabel, subtitleLabel);
         rootPane.setTop(header);
@@ -113,8 +114,8 @@ public class DeckViewController {
      * Setup the main content area
      */
     private void setupMainContent(BorderPane rootPane) {
-        VBox mainContent = new VBox(20);
-        mainContent.setPadding(new Insets(10));
+        VBox mainContent = new VBox(ThemeManager.SPACING_LARGE);
+        mainContent.setPadding(ThemeManager.getSmallInsets());
         
         // Current status section
         setupStatusSection(mainContent);
@@ -132,27 +133,21 @@ public class DeckViewController {
      * Setup the status section
      */
     private void setupStatusSection(VBox mainContent) {
-        VBox statusSection = new VBox(10);
+        VBox statusSection = new VBox(ThemeManager.SPACING_MEDIUM);
         statusSection.setAlignment(Pos.CENTER);
-        statusSection.setPadding(new Insets(15));
-        statusSection.setStyle(
-            "-fx-background-color: #f8f9fa; " +
-            "-fx-background-radius: 10px; " +
-            "-fx-border-color: #dee2e6; " +
-            "-fx-border-width: 1px; " +
-            "-fx-border-radius: 10px;"
-        );
+        statusSection.setPadding(ThemeManager.getStandardInsets());
+        ThemeManager.applyCardStyle(statusSection);
         
         Label statusHeaderLabel = new Label("Current Deck Status");
-        statusHeaderLabel.setStyle("-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;");
+        ThemeManager.styleSubtitle(statusHeaderLabel);
         
         statusLabel = new Label();
-        statusLabel.setStyle("-fx-font-size: 14px; -fx-text-fill: #495057; -fx-text-alignment: center;");
+        ThemeManager.styleBodyText(statusLabel);
         statusLabel.setTextAlignment(TextAlignment.CENTER);
         statusLabel.setMaxWidth(Double.MAX_VALUE);
         
         refreshStatusButton = new Button("Refresh Status");
-        styleButton(refreshStatusButton, "secondary");
+        ThemeManager.styleSecondaryButton(refreshStatusButton);
         refreshStatusButton.setOnAction(e -> refreshDeckStatus());
         
         statusSection.getChildren().addAll(statusHeaderLabel, statusLabel, refreshStatusButton);
@@ -163,32 +158,18 @@ public class DeckViewController {
      * Setup the deck information section
      */
     private void setupDeckInfoSection(VBox mainContent) {
-        VBox infoSection = new VBox(10);
-        infoSection.setPadding(new Insets(15));
-        infoSection.setStyle(
-            "-fx-background-color: #ffffff; " +
-            "-fx-background-radius: 10px; " +
-            "-fx-border-color: #dee2e6; " +
-            "-fx-border-width: 1px; " +
-            "-fx-border-radius: 10px;"
-        );
+        VBox infoSection = new VBox(ThemeManager.SPACING_MEDIUM);
+        infoSection.setPadding(ThemeManager.getStandardInsets());
+        ThemeManager.applyCardStyle(infoSection);
         
         Label infoHeaderLabel = new Label("Deck Information");
-        infoHeaderLabel.setStyle("-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;");
+        ThemeManager.styleSubtitle(infoHeaderLabel);
         
         deckInfoArea = new TextArea();
         deckInfoArea.setWrapText(true);
         deckInfoArea.setEditable(false);
         deckInfoArea.setPrefRowCount(8);
-        deckInfoArea.setStyle(
-            "-fx-background-color: #f8f9fa; " +
-            "-fx-control-inner-background: #f8f9fa; " +
-            "-fx-text-fill: #495057; " +
-            "-fx-font-size: 13px; " +
-            "-fx-border-color: #dee2e6; " +
-            "-fx-border-radius: 5px; " +
-            "-fx-font-family: 'Courier New', monospace;"
-        );
+        ThemeManager.styleTextArea(deckInfoArea);
         
         VBox.setVgrow(deckInfoArea, Priority.ALWAYS);
         
@@ -200,54 +181,51 @@ public class DeckViewController {
      * Setup the action buttons section
      */
     private void setupActionButtonsSection(VBox mainContent) {
-        VBox actionSection = new VBox(15);
+        VBox actionSection = new VBox(ThemeManager.SPACING_MEDIUM);
         actionSection.setAlignment(Pos.CENTER);
-        actionSection.setPadding(new Insets(15));
-        actionSection.setStyle(
-            "-fx-background-color: #ffffff; " +
-            "-fx-background-radius: 10px; " +
-            "-fx-border-color: #dee2e6; " +
-            "-fx-border-width: 1px; " +
-            "-fx-border-radius: 10px;"
-        );
+        actionSection.setPadding(ThemeManager.getStandardInsets());
+        ThemeManager.applyCardStyle(actionSection);
         
         Label actionHeaderLabel = new Label("Deck Actions");
-        actionHeaderLabel.setStyle("-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;");
+        ThemeManager.styleSubtitle(actionHeaderLabel);
         
         // Action buttons grid
-        HBox buttonRow1 = new HBox(15);
+        HBox buttonRow1 = new HBox(ThemeManager.SPACING_MEDIUM);
         buttonRow1.setAlignment(Pos.CENTER);
-        
-        HBox buttonRow2 = new HBox(15);
-        buttonRow2.setAlignment(Pos.CENTER);
         
         // Reset deck button
         resetDeckButton = new Button("Reset Deck");
         resetDeckButton.setPrefWidth(150);
-        styleButton(resetDeckButton, "primary");
+        ThemeManager.stylePrimaryButton(resetDeckButton);
         resetDeckButton.setOnAction(e -> confirmResetDeck());
         
         // Create new deck button
         createNewDeckButton = new Button("Create New Deck");
         createNewDeckButton.setPrefWidth(150);
-        styleButton(createNewDeckButton, "warning");
+        ThemeManager.styleWarningButton(createNewDeckButton);
         createNewDeckButton.setOnAction(e -> confirmCreateNewDeck());
         
         buttonRow1.getChildren().addAll(resetDeckButton, createNewDeckButton);
         
         // Add explanatory text
-        VBox explanationBox = new VBox(8);
+        VBox explanationBox = new VBox(ThemeManager.SPACING_SMALL);
         explanationBox.setAlignment(Pos.CENTER);
-        explanationBox.setPadding(new Insets(10));
-        explanationBox.setStyle("-fx-background-color: #e7f3ff; -fx-background-radius: 5px;");
+        explanationBox.setPadding(ThemeManager.getSmallInsets());
+        explanationBox.setStyle(
+            "-fx-background-color: " + ThemeManager.SECONDARY_DARK + "; " +
+            "-fx-background-radius: " + ThemeManager.BORDER_RADIUS + "px; " +
+            "-fx-border-color: " + ThemeManager.BORDER_ACCENT + "; " +
+            "-fx-border-width: 1px; " +
+            "-fx-border-radius: " + ThemeManager.BORDER_RADIUS + "px;"
+        );
         
         Label resetExplain = new Label("Reset Deck: Shuffles all 22 cards back into the current deck");
-        resetExplain.setStyle("-fx-font-size: 12px; -fx-text-fill: #0066cc;");
+        ThemeManager.styleBodyText(resetExplain);
         resetExplain.setWrapText(true);
         resetExplain.setTextAlignment(TextAlignment.CENTER);
         
         Label newDeckExplain = new Label("New Deck: Creates a completely fresh deck instance");
-        newDeckExplain.setStyle("-fx-font-size: 12px; -fx-text-fill: #cc6600;");
+        ThemeManager.styleMutedText(newDeckExplain);
         newDeckExplain.setWrapText(true);
         newDeckExplain.setTextAlignment(TextAlignment.CENTER);
         
@@ -261,12 +239,12 @@ public class DeckViewController {
      * Setup the footer with close button
      */
     private void setupFooter(BorderPane rootPane) {
-        HBox footer = new HBox(15);
+        HBox footer = new HBox(ThemeManager.SPACING_MEDIUM);
         footer.setAlignment(Pos.CENTER);
-        footer.setPadding(new Insets(20, 0, 10, 0));
+        footer.setPadding(new Insets(ThemeManager.SPACING_LARGE, 0, ThemeManager.SPACING_MEDIUM, 0));
         
         closeButton = new Button("Close");
-        styleButton(closeButton, "secondary");
+        ThemeManager.styleSecondaryButton(closeButton);
         closeButton.setOnAction(e -> deckStage.close());
         
         footer.getChildren().add(closeButton);
@@ -422,49 +400,12 @@ public class DeckViewController {
      * Style a button with the specified style class
      */
     private void styleButton(Button button, String styleClass) {
-        button.setPrefHeight(35);
-        button.setMinWidth(120);
-        
+        // Deprecated - use ThemeManager styling methods instead
         switch (styleClass) {
-            case "primary" -> {
-                button.setStyle(
-                    "-fx-background-color: #4a90e2; " +
-                    "-fx-text-fill: white; " +
-                    "-fx-font-size: 14px; " +
-                    "-fx-background-radius: 5px; " +
-                    "-fx-cursor: hand;"
-                );
-                button.setOnMouseEntered(e -> 
-                    button.setStyle(button.getStyle() + "-fx-background-color: #357abd;"));
-                button.setOnMouseExited(e -> 
-                    button.setStyle(button.getStyle().replace("-fx-background-color: #357abd;", "")));
-            }
-            case "warning" -> {
-                button.setStyle(
-                    "-fx-background-color: #f39c12; " +
-                    "-fx-text-fill: white; " +
-                    "-fx-font-size: 14px; " +
-                    "-fx-background-radius: 5px; " +
-                    "-fx-cursor: hand;"
-                );
-                button.setOnMouseEntered(e -> 
-                    button.setStyle(button.getStyle() + "-fx-background-color: #e67e22;"));
-                button.setOnMouseExited(e -> 
-                    button.setStyle(button.getStyle().replace("-fx-background-color: #e67e22;", "")));
-            }
-            default -> { // secondary
-                button.setStyle(
-                    "-fx-background-color: #6c757d; " +
-                    "-fx-text-fill: white; " +
-                    "-fx-font-size: 14px; " +
-                    "-fx-background-radius: 5px; " +
-                    "-fx-cursor: hand;"
-                );
-                button.setOnMouseEntered(e -> 
-                    button.setStyle(button.getStyle() + "-fx-background-color: #5a6268;"));
-                button.setOnMouseExited(e -> 
-                    button.setStyle(button.getStyle().replace("-fx-background-color: #5a6268;", "")));
-            }
+            case "primary" -> ThemeManager.stylePrimaryButton(button);
+            case "warning" -> ThemeManager.styleWarningButton(button);
+            case "danger" -> ThemeManager.styleDangerButton(button);
+            default -> ThemeManager.styleSecondaryButton(button);
         }
     }
     
@@ -492,27 +433,5 @@ public class DeckViewController {
         alert.showAndWait();
     }
     
-    /**
-     * Get custom CSS for the deck management interface
-     */
-    private String getCustomCSS() {
-        return """
-            .scroll-pane {
-                -fx-background-color: transparent;
-            }
-            .scroll-pane .viewport {
-                -fx-background-color: transparent;
-            }
-            .scroll-pane .content {
-                -fx-background-color: transparent;
-            }
-            .text-area {
-                -fx-background-insets: 0;
-                -fx-background-radius: 0;
-            }
-            .text-area .content {
-                -fx-background-color: transparent;
-            }
-            """;
-    }
+
 }

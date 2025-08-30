@@ -75,10 +75,10 @@ public class ReadingViewController {
         readingStage.initModality(Modality.NONE);
         readingStage.initOwner(primaryStage);
         readingStage.setTitle("Tarot Reading");
-        readingStage.setWidth(900);
-        readingStage.setHeight(700);
-        readingStage.setMinWidth(700);
-        readingStage.setMinHeight(500);
+        readingStage.setWidth(ThemeManager.WINDOW_DEFAULT_WIDTH);
+        readingStage.setHeight(ThemeManager.WINDOW_DEFAULT_HEIGHT);
+        readingStage.setMinWidth(ThemeManager.WINDOW_MIN_WIDTH);
+        readingStage.setMinHeight(ThemeManager.WINDOW_MIN_HEIGHT);
         
         // Create main layout
         BorderPane rootPane = new BorderPane();
