@@ -246,8 +246,8 @@ public class TarotGameApplication extends Application {
      * Handle deck management - placeholder
      */
     private void manageDeck() {
-        showNotImplementedDialog("Deck Management", 
-            "The deck management interface is being developed. For now, please use the console version.");
+        DeckViewController deckController = new DeckViewController(gameEngine, primaryStage);
+        deckController.showDeckManagementInterface();
     }
     
     /**
