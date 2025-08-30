@@ -219,8 +219,8 @@ public class TarotGameApplication extends Application {
      * Handle history action - placeholder
      */
     private void viewHistory() {
-        showNotImplementedDialog("Reading History", 
-            "The history interface is being developed. For now, please use the console version.");
+        HistoryViewController historyController = new HistoryViewController(gameEngine, primaryStage);
+        historyController.showHistoryInterface();
     }
     
     /**
